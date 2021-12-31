@@ -5,9 +5,9 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def get_unixtime():
-    unixtime = int(time())
-    return str(unixtime)
+def get_unix():
+    unix = int(time())
+    return str(unix)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
